@@ -1,4 +1,6 @@
-# Build an API using PosgreSQL and pg-promise
+[![Build Status](https://app.travis-ci.com/matjutapretty/api-with-psql-workshop.svg?branch=master)](https://app.travis-ci.com/matjutapretty/api-with-psql-workshop)
+
+<!-- # Build an API using PosgreSQL and pg-promise
 
 This workshop builds on the [psql refresher workshop]() you should use SQL that you wrote in that workshop to create the API endpoints needed to make the Unit Tests pass. 
 
@@ -87,4 +89,4 @@ psql -h localhost -U gary  -W -d garment_app
 
 Create the garment table in the new database using the `\i sql/garment.sql` command in `psql`.
 
-When you run the test using `npm test` the unit test will populate the `garment` table accordingly.
+When you run the test using `npm test` the unit test will populate the `garment` table accordingly. -->
