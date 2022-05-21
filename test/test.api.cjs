@@ -5,7 +5,7 @@ const assert = require('assert');
 const fs = require('fs');
 require('dotenv').config()
 
-const API = require('../api');
+const API = require('../api.cjs');
 const { default: axios } = require('axios');
 const app = express();
 

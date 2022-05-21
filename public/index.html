@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missy Tee using AlpineJS</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="//unpkg.com/alpinejs" defer></script> -->
+    <!-- <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script> -->
+</head>
+
+<body>
+    <h1>Calling APIs in AlpineJS</h1>
+
+    <h2>Call API on page load</h2>
+    <div x-data="{ users : []}" x-init="fetch('https://jsonplaceholder.typicode.com/users')
+			.then(r => r.json())
+			.then(data => users = data )">
+        <ul>
+            <template x-for="user in users">
+				<li x-text="user.name" ></li>
+			</template>
+        </ul>
+    </div>
+
+    <h2>Call API on click</h2>
+    <div x-data="{ users : [] }" x-init="">
+
+        <button @click="fetch('https://jsonplaceholder.typicode.com/users')
+			.then(r => r.json())
+			.then(data => users = data )">Load users</button>
+        <ul>
+            <template x-for="user in users">
+				<li x-text="user.name" ></li>
+			</template>
+        </ul>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="add-garments.js"></script>
+    <script src="field-manager.js"></script>
+</body>
+
+</html>
