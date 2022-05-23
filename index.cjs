@@ -36,7 +36,7 @@ const UserManager = require('./shop/user-manager.cjs');
 const ShoppingCart = require('./shop/shopping-cart.cjs');
 
 
-const DATABASE_URL = process.env.DATABASE_URL || 'postgresql://missy_tee:missy123@localhost:5432/missy_tee_app';
+const DATABASE_URL = process.env.DATABASE_URL; 
 const pgp = PgPromise({});
 const db = pgp(DATABASE_URL);
 // const connectionString =
